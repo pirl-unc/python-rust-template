@@ -1,0 +1,36 @@
+name: Python CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up miniconda
+    - uses: conda-incubator/setup-miniconda@v2
+      with:
+        activate-environment: test-environment
+
+    - name: Install dependencies
+      run: |
+        pip install . --verbose
+        conda install -c anaconda pylint
+        conda install -c conda-forge pytest-cov
+
+    - name: Run Pylint
+      run: |
+        bash lint.sh
+
+    - name: Run unit tests
+      run: |
+        bash unittest.sh

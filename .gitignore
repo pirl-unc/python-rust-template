@@ -1,0 +1,9 @@
+.idea/
+dist/
+data/
+build/
+__pycache__/
+**/.DS_Store
+.pytest_cache/
+.coverage*
+src/testpkg.egg-info/
