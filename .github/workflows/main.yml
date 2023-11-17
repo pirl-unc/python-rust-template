@@ -27,9 +27,7 @@ jobs:
         conda install -c conda-forge pytest-cov
 
     - name: Run Pylint
-      run: |
-        ./lint.sh
+      run: ./lint.sh
 
     - name: Run unit tests
-      run: |
-        ./unittest.sh
+      run: ./unittest.sh
