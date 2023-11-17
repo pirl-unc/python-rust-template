@@ -19,7 +19,7 @@ jobs:
       uses: conda-incubator/setup-miniconda@v2
       with:
           activate-environment: foo
-          python-version: 3.10
+          python-version: "3.10"
           allow-softlinks: true
           channel-priority: flexible
           show-channel-urls: true
