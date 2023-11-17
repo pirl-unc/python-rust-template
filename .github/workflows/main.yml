@@ -28,10 +28,11 @@ jobs:
 
     - name: Run Pylint
       run: |
-        chmod +x lint.sh
+        pylint --version
+        chmod +x ./lint.sh
         ./lint.sh
 
     - name: Run unit tests
       run: |
-        chmod +x unittest.sh
+        chmod +x ./unittest.sh
         ./unittest.sh

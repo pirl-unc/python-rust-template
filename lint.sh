@@ -1,3 +1,4 @@
+#!/bin/bash
 set -o errexit
 find src test -name '*.py' \
   | xargs pylint \
