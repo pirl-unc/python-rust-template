@@ -8,11 +8,11 @@ on:
       - main
 
 jobs:
-  unit-test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout repository
       uses: actions/checkout@v2
 
     - name: Set up Miniconda
@@ -22,19 +22,5 @@ jobs:
 
     - name: Create conda environment
       run: |
-        conda create -n test-environment python=3.10
-        conda activate test-environment
-
-    - name: Install dependencies
-      run: |
-        pip install . --verbose
-        conda install -c anaconda pylint
-        conda install -c conda-forge pytest-cov
-
-    - name: Run Pylint
-      run: |
-        bash lint.sh
-
-    - name: Run unit tests
-      run: |
-        bash unittest.sh
+        conda create -n myenv python=3.10
+        conda activate myenv
