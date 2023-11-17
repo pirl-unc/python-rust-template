@@ -18,12 +18,8 @@ jobs:
     - name: Set up Miniconda
       uses: conda-incubator/setup-miniconda@v2
       with:
-          activate-environment: foo
+          activate-environment: test-environment
           python-version: "3.10"
-          allow-softlinks: true
-          channel-priority: flexible
-          show-channel-urls: true
-          use-only-tar-bz2: true
 
     - name: Install dependencies
       run: |
