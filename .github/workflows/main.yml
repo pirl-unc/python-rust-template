@@ -18,7 +18,6 @@ jobs:
     - name: Set up Miniconda
       uses: conda-incubator/setup-miniconda@v2
       with:
-          activate-environment: test-environment
           python-version: "3.10"
 
     - name: Install dependencies
