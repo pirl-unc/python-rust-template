@@ -18,14 +18,14 @@ jobs:
     - name: Set up Miniconda
       uses: conda-incubator/setup-miniconda@v2
       with:
+        miniconda-version: "latest"
         activate-environment: test-env
         python-version: "3.10"
-        auto-activate-base: true
+        auto-activate-base: false
 
     - name: Install dependencies
       run: |
         conda env list
-        conda activate test-env
         pip install . --verbose
         conda install -c anaconda pylint
         conda install -c conda-forge pytest-cov
