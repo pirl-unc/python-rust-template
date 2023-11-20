@@ -34,5 +34,4 @@ jobs:
     - name: Run Pylint
       shell: bash -l {0}
       run: |
-        chmod +x lint.sh
         ./lint.sh
