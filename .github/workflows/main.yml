@@ -32,5 +32,6 @@ jobs:
         conda install -c conda-forge pytest-cov
 
     - name: Run Pylint
+      shell: bash -l {0}
       run: |
         pylint --version
