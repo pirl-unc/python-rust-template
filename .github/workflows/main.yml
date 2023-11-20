@@ -34,4 +34,11 @@ jobs:
     - name: Run Pylint
       shell: bash -l {0}
       run: |
+        chmod +x lint.sh
         ./lint.sh
+
+    - name: Run unit tests
+      shell: bash -l {0}
+      run: |
+        chmod +x unittest.sh
+        ./unittest.sh
