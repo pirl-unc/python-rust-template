@@ -1,5 +1,6 @@
 
-# ci-test
-The purpose of this repository is to test continuous integration using GitHub Actions
+# python-rust template
+This repository is a template for integrating python and rust source codes into a package.
+The template additionally includes a GitHub Actions workflow for unit testing.
 
-[![build](https://github.com/pirl-unc/ci-test/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/pirl-unc/ci-test/actions/workflows/main.yml)
+[![build](https://github.com/pirl-unc/python-rust-template/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/pirl-unc/python-rust-template/actions/workflows/main.yml)

@@ -30,6 +30,7 @@ jobs:
         pip install . --verbose
         conda install -c anaconda pylint
         conda install -c conda-forge pytest-cov
+        conda install -c conda-forge rust
 
     - name: Run Pylint
       shell: bash -l {0}
