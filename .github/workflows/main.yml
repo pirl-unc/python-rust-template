@@ -34,4 +34,5 @@ jobs:
     - name: Run Pylint
       shell: bash -l {0}
       run: |
-        pylint --version
+        ./lint.sh
+
