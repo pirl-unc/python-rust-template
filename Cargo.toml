@@ -1,0 +1,21 @@
+[package]
+name = "testpkg"
+version = "0.0.1"
+edition = "2021"
+
+[package.metadata.maturin]
+name = "testpkg.testpkgrs"
+
+[lib]
+name = "testpkg"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.17.3", features = ["extension-module"] }
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+debug = 0
+incremental = true

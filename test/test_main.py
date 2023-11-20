@@ -1,4 +1,4 @@
-from testpkg import hello_world
+from testpkg.main import add_numbers
 
 def test_main():
-    hello_world()
+    add_numbers(value_1=10, value_2=5)
