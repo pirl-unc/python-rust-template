@@ -35,4 +35,3 @@ jobs:
       shell: bash -l {0}
       run: |
         ./lint.sh
-
